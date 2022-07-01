@@ -1,0 +1,9 @@
+---
+- name: Ensure httpd is at the latest version
+  yum:
+    name: httpd
+    state: latest
+- name: Make sure httpd is running
+  systemd:
+    state: started
+    name: httpd
